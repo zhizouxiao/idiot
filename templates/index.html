@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Num</th>
+                <th>UserName</th>
+                <th>ApplyMoney</th>
+                <th>ActualMoney</th>
+                <th>Note</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>1</td>
+                <td>{{ entry.username }}</td>
+                <td>{{ entry.apply_money }}</td>
+                <td>{{ entry.actual_money}}</td>
+                <td>{{ entry.note }}</td>
+                <td>{{ entry.datetime }}</td>
+            </tr>
+           
+            {% else %}
+            <li><em>Unbelievable.  No records here so far</em>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
