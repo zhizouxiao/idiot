@@ -22,8 +22,9 @@
          flask --app=idiot run
 
          the application will greet you on
-         http://localhost:5000/
-	
+         http://localhost:5001/
+      4. deploy 
+         this project is deploy in heroku.
     ~ Is it tested?
 
       You betcha.  Run the `idiot_tests.py` file to see
