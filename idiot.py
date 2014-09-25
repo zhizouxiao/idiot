@@ -145,6 +145,13 @@ def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('index'))
+<<<<<<< HEAD
 
 if __name__ == "__main__":
     app.run()
+=======
+import os
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5001))
+    app.run(host='0.0.0.0', port=port)
+>>>>>>> master
