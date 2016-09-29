@@ -43,13 +43,13 @@ def logout(client):
     return client.get('/logout', follow_redirects=True)
 
 
-def test_empty_db(client):
+def t1est_empty_db(client):
     """Start with a blank database."""
     rv = client.get('/')
     assert b'No entries here so far' in rv.data
 
 
-def test_login_logout(client):
+def t1est_login_logout(client):
     """Make sure login and logout works"""
     rv = login(client, idiot.app.config['USERNAME'],
                idiot.app.config['PASSWORD'])
@@ -64,7 +64,7 @@ def test_login_logout(client):
     assert b'Invalid password' in rv.data
 
 
-def test_messages(client):
+def t1est_messages(client):
     """Test that messages work"""
     login(client, idiot.app.config['USERNAME'],
           idiot.app.config['PASSWORD'])
